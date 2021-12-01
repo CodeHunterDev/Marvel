@@ -1,4 +1,4 @@
-package com.amnah.marvelapp.ui
+package com.amnah.marvelapp.ui.home
 
 import android.util.Log
 import androidx.lifecycle.ViewModel

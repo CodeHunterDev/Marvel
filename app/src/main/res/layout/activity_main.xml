@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.amnah.marvelapp.ui.HomeViewModel" />
+            type="com.amnah.marvelapp.ui.home.HomeViewModel" />
 
 
     </data>
@@ -14,7 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.MainActivity">
+        tools:context=".ui.MarvelActivity">
 
         <TextView
             android:layout_width="wrap_content"
