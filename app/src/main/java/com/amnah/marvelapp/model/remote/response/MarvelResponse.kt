@@ -1,9 +1,8 @@
 package com.amnah.marvelapp.model.remote.response
 
-
 import com.google.gson.annotations.SerializedName
 
-data class MarvelCharactersResponse(
+data class MarvelResponse<T>(
     @SerializedName("attributionHTML")
     val attributionHTML: String?,
     @SerializedName("attributionText")
@@ -13,7 +12,7 @@ data class MarvelCharactersResponse(
     @SerializedName("copyright")
     val copyright: String?,
     @SerializedName("data")
-    val data: Data?,
+    val data: BaseData<T>?,
     @SerializedName("etag")
     val etag: String?,
     @SerializedName("status")

@@ -1,7 +1,8 @@
 package com.amnah.marvelapp.model.remote
 
 import com.amnah.marvelapp.BuildConfig
-import com.amnah.marvelapp.model.remote.response.MarvelCharactersResponse
+import com.amnah.marvelapp.model.remote.response.MarvelResponse
+import com.amnah.marvelapp.model.remote.response.character.CharacterResult
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -10,7 +11,7 @@ import retrofit2.http.GET
 
 interface MarvelService {
     @GET("characters")
-    suspend fun getCharacters(): Response<MarvelCharactersResponse>
+    suspend fun getCharacters(): Response<MarvelResponse<CharacterResult>>
 
     companion object {
         private val okHttpClient = okhttp3.OkHttpClient

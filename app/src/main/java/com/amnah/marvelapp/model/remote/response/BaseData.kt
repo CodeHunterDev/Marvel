@@ -3,7 +3,7 @@ package com.amnah.marvelapp.model.remote.response
 
 import com.google.gson.annotations.SerializedName
 
-data class Data(
+data class BaseData<T>(
     @SerializedName("count")
     val count: Int?,
     @SerializedName("limit")
@@ -11,7 +11,7 @@ data class Data(
     @SerializedName("offset")
     val offset: Int?,
     @SerializedName("results")
-    val results: List<Result>?,
+    val results: List<T>?,
     @SerializedName("total")
     val total: Int?
 )

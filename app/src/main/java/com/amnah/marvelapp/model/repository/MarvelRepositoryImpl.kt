@@ -1,9 +1,9 @@
 package com.amnah.marvelapp.model.repository
 
 import android.util.Log
-import com.amnah.marvelapp.BuildConfig
 import com.amnah.marvelapp.model.remote.MarvelService
-import com.amnah.marvelapp.model.remote.response.MarvelCharactersResponse
+import com.amnah.marvelapp.model.remote.response.MarvelResponse
+import com.amnah.marvelapp.model.remote.response.character.CharacterResult
 import com.amnah.marvelapp.utils.State
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -25,7 +25,7 @@ class MarvelRepositoryImpl : MarvelRepository {
         }
     }
 
-    override fun getCharacters(): Flow<State<MarvelCharactersResponse?>> {
+    override fun getCharacters(): Flow<State<MarvelResponse<CharacterResult>?>> {
         return wrapWithResponse { apiService.getCharacters(
         ) }
     }

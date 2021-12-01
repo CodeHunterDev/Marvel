@@ -1,9 +1,10 @@
-package com.amnah.marvelapp.model.remote.response
+package com.amnah.marvelapp.model.remote.response.character
 
 
+import com.amnah.marvelapp.model.remote.response.*
 import com.google.gson.annotations.SerializedName
 
-data class Result(
+data class CharacterResult(
     @SerializedName("comics")
     val comics: Comics?,
     @SerializedName("description")

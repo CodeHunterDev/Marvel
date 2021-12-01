@@ -1,9 +1,9 @@
-package com.amnah.marvelapp.model.remote.response
+package com.amnah.marvelapp.model.remote.response.comics
 
 
 import com.google.gson.annotations.SerializedName
 
-data class ItemXX(
+data class CollectedIssue(
     @SerializedName("name")
     val name: String?,
     @SerializedName("resourceURI")

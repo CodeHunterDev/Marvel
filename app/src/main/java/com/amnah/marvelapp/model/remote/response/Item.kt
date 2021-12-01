@@ -7,5 +7,7 @@ data class Item(
     @SerializedName("name")
     val name: String?,
     @SerializedName("resourceURI")
-    val resourceURI: String?
+    val resourceURI: String?,
+    @SerializedName("type")
+    val type: String?
 )

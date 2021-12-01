@@ -1,6 +1,5 @@
 package com.amnah.marvelapp.model.remote.response
 
-
 import com.google.gson.annotations.SerializedName
 
 data class Events(
@@ -9,7 +8,7 @@ data class Events(
     @SerializedName("collectionURI")
     val collectionURI: String?,
     @SerializedName("items")
-    val items: List<ItemX>?,
+    val items: List<Item>?,
     @SerializedName("returned")
     val returned: Int?
 )
