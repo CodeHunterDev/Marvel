@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
 interface MarvelService {
-    @GET("/v1/public/characters")
+    @GET("characters")
     suspend fun getCharacters(): Response<MarvelCharactersResponse>
 
     companion object {
