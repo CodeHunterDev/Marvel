@@ -1,6 +1,5 @@
 package com.amnah.marvelapp.model.remote.response
 
-
 import com.amnah.marvelapp.model.remote.response.character.CharacterResult
 import com.google.gson.annotations.SerializedName
 
