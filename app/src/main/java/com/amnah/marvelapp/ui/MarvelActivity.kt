@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.amnah.marvelapp.R
 import com.amnah.marvelapp.databinding.ActivityMarvelBinding
-import com.amnah.marvelapp.model.local.MarvelDatabase
+import com.amnah.marvelapp.data.local.MarvelDatabase
 
 class MarvelActivity : AppCompatActivity() {
     private lateinit var _binding: ActivityMarvelBinding

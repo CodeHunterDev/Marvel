@@ -6,7 +6,7 @@
     <data>
         <variable
             name="item"
-            type="com.amnah.marvelapp.model.local.entity.CharacterEntity" />
+            type="com.amnah.marvelapp.data.repository.domain.models.Characters" />
 
     </data>
     <androidx.cardview.widget.CardView
@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="fitXY"
-                app:imageUrl="@{item.image}"
+                app:imageUrl="@{item.imageUrl}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
