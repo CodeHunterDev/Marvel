@@ -6,7 +6,9 @@ import androidx.databinding.DataBindingUtil
 import com.amnah.marvelapp.R
 import com.amnah.marvelapp.databinding.ActivityMarvelBinding
 import com.amnah.marvelapp.data.local.MarvelDatabase
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MarvelActivity : AppCompatActivity() {
     private lateinit var _binding: ActivityMarvelBinding
 
@@ -14,6 +16,6 @@ class MarvelActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = DataBindingUtil.setContentView(this, R.layout.activity_marvel)
 
-        MarvelDatabase.getInstance(applicationContext)
+//        MarvelDatabase.getInstance(applicationContext)
     }
 }

@@ -12,21 +12,4 @@ import retrofit2.http.GET
 interface MarvelService {
     @GET("characters")
     suspend fun getCharacters(): Response<BaseMarvelResponse<CharacterResult>>
-
-    companion object {
-        private val okHttpClient = okhttp3.OkHttpClient
-            .Builder()
-            .addInterceptor(HttpLoggingInterceptor().apply {
-                setLevel(HttpLoggingInterceptor.Level.BODY)
-            }).addInterceptor(AuthInterceptor())
-            .build()
-
-        private val retrofit = Retrofit.Builder()
-            .baseUrl(BuildConfig.BASE_API_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .client(okHttpClient)
-            .build()
-
-        val apiService = retrofit.create(MarvelService::class.java)
-    }
 }

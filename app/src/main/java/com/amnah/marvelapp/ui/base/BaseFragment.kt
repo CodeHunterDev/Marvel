@@ -8,6 +8,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import com.amnah.marvelapp.BR
+import dagger.hilt.android.AndroidEntryPoint
 
 abstract class BaseFragment<VDB : ViewDataBinding> : Fragment() {
 
