@@ -11,7 +11,7 @@ import retrofit2.http.GET
 
 interface MarvelService {
     @GET("characters")
-    suspend fun getCharacters(): Response<MarvelResponse<CharacterResult>>
+    suspend fun getCharacters(): Response<MarvelResponse>
 
     companion object {
         private val okHttpClient = okhttp3.OkHttpClient

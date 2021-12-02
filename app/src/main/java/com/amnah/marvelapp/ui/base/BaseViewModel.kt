@@ -13,8 +13,14 @@ abstract class BaseViewModel : ViewModel() {
     fun <T> modelScope(scopeValue: Flow<State<T?>>, liveValue: MutableLiveData<State<T?>>) {
         viewModelScope.launch {
             scopeValue
-                .catch { }
                 .collect { liveValue.value = it }
         }
     }
+
+//    fun <T> modelScopeWithoutCollect(refreshCharacter: Flow<State<T?>>){
+//        viewModelScope.launch {
+//            refreshCharacter
+//        }
+//    }
+
 }

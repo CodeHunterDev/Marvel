@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.amnah.marvelapp.BR
 
 interface BaseInteractionListener
 
@@ -30,7 +31,7 @@ abstract class BaseAdapter<T>(
         val currentItem = items[position]
         when(holder) {
             is ItemViewHolder ->{
-//                holder.binding.setVariable(BR.item, currentItem)
+                holder.binding.setVariable(BR.item, currentItem)
 //                holder.binding.setVariable(BR.listener, listener)
             }
         }

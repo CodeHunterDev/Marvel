@@ -8,11 +8,10 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import com.amnah.marvelapp.BR
-import kotlinx.coroutines.channels.BroadcastChannel
 
 abstract class BaseFragment<VDB : ViewDataBinding> : Fragment() {
 
-    abstract val viewModel: ViewModel
+    abstract val viewModel: BaseViewModel
     abstract val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> VDB
     private lateinit var _binding: VDB
     protected val binding get() = _binding

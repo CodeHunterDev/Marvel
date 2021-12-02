@@ -1,15 +1,24 @@
 package com.amnah.marvelapp.ui.home
 
-import android.util.Log
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.asLiveData
+import androidx.lifecycle.viewModelScope
+import com.amnah.marvelapp.model.local.entity.CharacterEntity
 import com.amnah.marvelapp.model.repository.MarvelRepositoryImpl
+import com.amnah.marvelapp.ui.base.BaseViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
-class HomeViewModel: ViewModel() {
+class HomeViewModel : BaseViewModel(), ICharacterInteraction {
     private val repository = MarvelRepositoryImpl()
 
-    val marvelData = repository.getCharacters().asLiveData()
+    val character: LiveData<List<CharacterEntity>> =
+        repository.getCharacters().asLiveData(Dispatchers.IO)
+
     init {
-        Log.i("Amnah", marvelData.value.toString())
+        viewModelScope.launch {
+            repository.refreshCharacter()
+        }
+
     }
 }
