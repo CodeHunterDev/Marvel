@@ -7,13 +7,13 @@
 
         <variable
             name="viewModel"
-            type="com.amnah.marvelapp.ui.home.CharacterViewModel" />
+            type="com.amnah.marvelapp.ui.characters.CharacterViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.home.CharacterFragment">
+        tools:context=".ui.characters.CharacterFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_character"

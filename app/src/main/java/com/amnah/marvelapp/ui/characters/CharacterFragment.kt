@@ -1,4 +1,4 @@
-package com.amnah.marvelapp.ui.home
+package com.amnah.marvelapp.ui.characters
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,9 +1,8 @@
-package com.amnah.marvelapp.ui.home
+package com.amnah.marvelapp.ui.characters
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.asLiveData
 import com.amnah.marvelapp.data.repository.MarvelRepository
-import com.amnah.marvelapp.data.repository.MarvelRepositoryImpl
 import com.amnah.marvelapp.data.repository.domain.models.Characters
 import com.amnah.marvelapp.ui.base.BaseViewModel
 import com.amnah.marvelapp.utils.State
