@@ -12,7 +12,7 @@ import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(
+class CharacterViewModel @Inject constructor(
     private val repository: MarvelRepository
 ) : BaseViewModel(), ICharacterInteraction {
 
