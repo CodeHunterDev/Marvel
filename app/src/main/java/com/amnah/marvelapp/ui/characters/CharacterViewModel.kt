@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CharacterViewModel @Inject constructor(
-    private val repository: MarvelRepository
+    repository: MarvelRepository
 ) : BaseViewModel(), ICharacterInteraction {
 
     val character: LiveData<State<List<Characters>?>> =

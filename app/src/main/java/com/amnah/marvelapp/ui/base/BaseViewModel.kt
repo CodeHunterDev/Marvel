@@ -13,7 +13,7 @@ abstract class BaseViewModel : ViewModel() {
     fun <T> modelScope(scopeValue: Flow<State<T?>>, liveValue: MutableLiveData<State<T?>>) {
         viewModelScope.launch {
             scopeValue
-                .collect { liveValue.value = it }
+                .collect { liveValue.postValue(it) }
         }
     }
 

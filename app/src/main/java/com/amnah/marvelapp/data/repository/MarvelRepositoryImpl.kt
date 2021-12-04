@@ -1,5 +1,6 @@
 package com.amnah.marvelapp.data.repository
 
+import android.util.Log
 import com.amnah.marvelapp.data.remote.MarvelService
 import com.amnah.marvelapp.data.repository.domain.mapper.CharacterMapper
 import com.amnah.marvelapp.data.repository.domain.models.Characters
@@ -26,6 +27,22 @@ class MarvelRepositoryImpl @Inject constructor(
                 emit(State.Error(throwable))
             }
 
+        }
+    }
+
+    override fun getSearchCharacters(name: String?): Flow<State<List<Characters>?>> {
+        return flow {
+            emit(State.Loading)
+            try {
+                val searchCharacters =
+                    apiService.getSearchCharacter(name).body()?.data?.results?.map {
+                        characterMapper.map(it)
+                    }
+                emit(State.Success(searchCharacters))
+            } catch (throwable: Throwable) {
+                emit(State.Error(throwable))
+                Log.i("Amnahjj", throwable.message.toString())
+            }
         }
     }
 }

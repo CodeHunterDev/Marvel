@@ -19,9 +19,8 @@ class AuthInterceptor : Interceptor {
                 addQueryParameter(HASH_PARAM, hash)
 
             }.build().also {
-                val cha = chain.proceed(this.newBuilder().url(it).build())
-                Log.i("Amnah", cha.body.toString())
-                return cha
+
+                return chain.proceed(this.newBuilder().url(it).build())
             }
         }
     }

@@ -6,4 +6,6 @@ import kotlinx.coroutines.flow.Flow
 
 interface MarvelRepository {
     fun getCharacters(): Flow<State<List<Characters>?>>
+
+    fun getSearchCharacters(name: String?): Flow<State<List<Characters>?>>
 }
