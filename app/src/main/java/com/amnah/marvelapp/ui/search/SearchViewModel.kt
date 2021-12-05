@@ -9,6 +9,7 @@ import com.amnah.marvelapp.ui.base.BaseViewModel
 import com.amnah.marvelapp.ui.characters.ICharacterInteraction
 import com.amnah.marvelapp.utils.State
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.debounce
 import javax.inject.Inject
 
 @HiltViewModel
@@ -21,7 +22,7 @@ class SearchViewModel @Inject constructor(
         get() = _inputSearch
 
     fun onTextChanged(text: CharSequence?) {
-        modelScope(repository.getSearchCharacters(text.toString()), _inputSearch)
+        modelScope(repository.getSearchCharacters(text.toString()).debounce(2000), _inputSearch)
         Log.i("Amnah", inputSearch.toString())
     }
 }

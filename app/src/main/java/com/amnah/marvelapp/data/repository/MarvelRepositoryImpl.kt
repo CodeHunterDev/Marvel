@@ -2,6 +2,7 @@ package com.amnah.marvelapp.data.repository
 
 import android.util.Log
 import com.amnah.marvelapp.data.local.MarvelDatabase
+import com.amnah.marvelapp.data.local.dao.MarvelCharacterDao
 import com.amnah.marvelapp.data.local.entity.CharacterEntity
 import com.amnah.marvelapp.data.remote.MarvelService
 import com.amnah.marvelapp.data.repository.domain.mapper.CharacterMapper
@@ -17,7 +18,7 @@ import javax.inject.Inject
 class MarvelRepositoryImpl @Inject constructor(
     private val apiService: MarvelService,
     private val characterMapper: CharacterMapper,
-    private val characterDao: MarvelDatabase
+    private val characterDao: MarvelCharacterDao
 ) : MarvelRepository {
 
     override  fun getCharacters(): Flow<State<List<CharacterEntity>?>> {
@@ -28,7 +29,7 @@ class MarvelRepositoryImpl @Inject constructor(
                     apiService.getCharacters().body()?.data?.results?.map { characterEntity ->
                         characterMapper.characterEntityMap(characterEntity)
                     }
-                bodyCharacters?.let { characterDao.marvelDao().addCharacters(it) }
+                bodyCharacters?.let { characterDao.addCharacters(it) }
                 emit(State.Success(bodyCharacters))
             }catch (e:Exception){
 

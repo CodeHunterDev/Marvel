@@ -20,7 +20,7 @@ object RepositoryModule {
     fun providesMarvelRepository(
         apiService: MarvelService,
         characterMapper: CharacterMapper,
-        characterDao: MarvelDatabase
+        characterDao: MarvelCharacterDao
     ): MarvelRepository {
         return MarvelRepositoryImpl(apiService, characterMapper,characterDao)
     }

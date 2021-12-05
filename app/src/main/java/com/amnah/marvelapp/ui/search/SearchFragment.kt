@@ -1,17 +1,12 @@
 package com.amnah.marvelapp.ui.search
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.amnah.marvelapp.R
 import com.amnah.marvelapp.databinding.FragmentSearchBinding
 import com.amnah.marvelapp.ui.base.BaseFragment
-import com.amnah.marvelapp.ui.base.BaseViewModel
-import com.amnah.marvelapp.ui.characters.CharacterAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -23,7 +18,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.searchViewModel = viewModel
-        binding.recyclerCharacter.adapter = CharacterAdapter(mutableListOf(),viewModel)
+        binding.recyclerCharacter.adapter = SearchAdapter(mutableListOf(),viewModel)
     }
 
 }
