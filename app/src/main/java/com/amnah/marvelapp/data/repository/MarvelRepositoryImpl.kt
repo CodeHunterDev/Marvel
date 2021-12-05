@@ -1,32 +1,38 @@
 package com.amnah.marvelapp.data.repository
 
 import android.util.Log
+import com.amnah.marvelapp.data.local.MarvelDatabase
+import com.amnah.marvelapp.data.local.entity.CharacterEntity
 import com.amnah.marvelapp.data.remote.MarvelService
 import com.amnah.marvelapp.data.repository.domain.mapper.CharacterMapper
 import com.amnah.marvelapp.data.repository.domain.models.Characters
 import com.amnah.marvelapp.utils.State
+import dagger.assisted.Assisted
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import java.lang.Exception
+import java.security.PrivateKey
 import javax.inject.Inject
 
 class MarvelRepositoryImpl @Inject constructor(
     private val apiService: MarvelService,
-    private val characterMapper: CharacterMapper
+    private val characterMapper: CharacterMapper,
+    private val characterDao: MarvelDatabase
 ) : MarvelRepository {
 
-    override fun getCharacters(): Flow<State<List<Characters>?>> {
+    override  fun getCharacters(): Flow<State<List<CharacterEntity>?>> {
         return flow {
             emit(State.Loading)
             try {
                 val bodyCharacters =
-                    apiService.getCharacters().body()?.data?.results?.map { characterResult ->
-                        characterMapper.map(characterResult)
+                    apiService.getCharacters().body()?.data?.results?.map { characterEntity ->
+                        characterMapper.characterEntityMap(characterEntity)
                     }
+                bodyCharacters?.let { characterDao.marvelDao().addCharacters(it) }
                 emit(State.Success(bodyCharacters))
-            } catch (throwable: Throwable) {
-                emit(State.Error(throwable))
-            }
+            }catch (e:Exception){
 
+            }
         }
     }
 
@@ -41,7 +47,7 @@ class MarvelRepositoryImpl @Inject constructor(
                 emit(State.Success(searchCharacters))
             } catch (throwable: Throwable) {
                 emit(State.Error(throwable))
-                Log.i("Amnahjj", throwable.message.toString())
+                Log.i("Amnah", throwable.message.toString())
             }
         }
     }

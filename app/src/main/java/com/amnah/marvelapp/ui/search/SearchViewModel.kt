@@ -22,7 +22,6 @@ class SearchViewModel @Inject constructor(
 
     fun onTextChanged(text: CharSequence?) {
         modelScope(repository.getSearchCharacters(text.toString()), _inputSearch)
-
         Log.i("Amnah", inputSearch.toString())
     }
 }

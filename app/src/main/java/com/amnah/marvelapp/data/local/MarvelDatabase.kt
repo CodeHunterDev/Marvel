@@ -6,6 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.amnah.marvelapp.data.local.dao.MarvelCharacterDao
 import com.amnah.marvelapp.data.local.entity.CharacterEntity
+import dagger.Provides
 
 @Database(entities = [CharacterEntity::class], version = 1)
 abstract class MarvelDatabase : RoomDatabase() {

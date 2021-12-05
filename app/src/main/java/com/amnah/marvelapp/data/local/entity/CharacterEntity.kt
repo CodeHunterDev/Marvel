@@ -7,7 +7,5 @@ import androidx.room.PrimaryKey
 data class CharacterEntity(
     @PrimaryKey var id: Long,
     var name: String,
-    var description: String,
-    var modified: String,
-    var image: String
+    var imageUrl: String
 )

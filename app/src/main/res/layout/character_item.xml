@@ -6,7 +6,7 @@
     <data>
         <variable
             name="item"
-            type="com.amnah.marvelapp.data.repository.domain.models.Characters" />
+            type="com.amnah.marvelapp.data.local.entity.CharacterEntity" />
 
     </data>
     <androidx.cardview.widget.CardView

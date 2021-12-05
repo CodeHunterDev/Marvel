@@ -18,7 +18,7 @@ class MarvelActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = DataBindingUtil.setContentView(this, R.layout.activity_marvel)
 
-//        MarvelDatabase.getInstance(applicationContext)
+        MarvelDatabase.getInstance(applicationContext)
     }
 
     override fun onResume() {
