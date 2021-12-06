@@ -10,5 +10,7 @@ interface MarvelRepository {
 
     fun getSearchCharacters(name: String?): Flow<State<List<Characters>?>>
 
-//    suspend fun getCharacterRefresh()
+    fun getEvents(): Flow<State<List<Characters>?>>
+
+    suspend fun getCharacterRefresh(name: String?)
 }

@@ -16,10 +16,10 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/creatorFragment"
-        android:name="com.amnah.marvelapp.ui.creator.CreatorFragment"
+        android:id="@+id/storyFragment"
+        android:name="com.amnah.marvelapp.ui.story.EventsFragment"
         android:label="fragment_creator"
-        tools:layout="@layout/fragment_creator" />
+        tools:layout="@layout/fragment_Events" />
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.amnah.marvelapp.ui.search.SearchFragment"

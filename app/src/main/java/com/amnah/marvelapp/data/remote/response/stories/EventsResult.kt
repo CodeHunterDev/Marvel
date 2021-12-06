@@ -1,36 +1,40 @@
-package com.amnah.marvelapp.data.remote.response.creator
+package com.amnah.marvelapp.data.remote.response.stories
 
 
 import com.amnah.marvelapp.data.remote.response.*
 import com.google.gson.annotations.SerializedName
 
-data class CreatorResult(
+data class EventsResult(
+    @SerializedName("characters")
+    val characters: Characters?,
     @SerializedName("comics")
     val comics: Comics?,
-    @SerializedName("events")
-    val events: Events?,
-    @SerializedName("firstName")
-    val firstName: String?,
-    @SerializedName("fullName")
-    val fullName: String?,
+    @SerializedName("creators")
+    val creators: Creators?,
+    @SerializedName("description")
+    val description: String?,
+    @SerializedName("end")
+    val end: String?,
     @SerializedName("id")
     val id: Int?,
-    @SerializedName("lastName")
-    val lastName: String?,
-    @SerializedName("middleName")
-    val middleName: String?,
     @SerializedName("modified")
     val modified: String?,
+    @SerializedName("next")
+    val next: Next?,
+    @SerializedName("previous")
+    val previous: Previous?,
     @SerializedName("resourceURI")
     val resourceURI: String?,
     @SerializedName("series")
     val series: Series?,
+    @SerializedName("start")
+    val start: String?,
     @SerializedName("stories")
     val stories: Stories?,
-    @SerializedName("suffix")
-    val suffix: String?,
     @SerializedName("thumbnail")
     val thumbnail: Thumbnail?,
+    @SerializedName("title")
+    val title: String?,
     @SerializedName("urls")
     val urls: List<Url>?
 )

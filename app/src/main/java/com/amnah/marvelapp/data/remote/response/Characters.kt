@@ -1,10 +1,9 @@
-package com.amnah.marvelapp.data.remote.response.comics
+package com.amnah.marvelapp.data.remote.response
 
 
-import com.amnah.marvelapp.data.remote.response.Item
 import com.google.gson.annotations.SerializedName
 
-data class Creators(
+data class Characters(
     @SerializedName("available")
     val available: Int?,
     @SerializedName("collectionURI")
