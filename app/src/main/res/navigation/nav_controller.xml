@@ -25,4 +25,9 @@
         android:name="com.amnah.marvelapp.ui.search.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/comicsFragment"
+        android:name="com.amnah.marvelapp.ui.comics.ComicsFragment"
+        android:label="ComicsFragment"
+        tools:layout="@layout/fragment_comics"/>
 </navigation>

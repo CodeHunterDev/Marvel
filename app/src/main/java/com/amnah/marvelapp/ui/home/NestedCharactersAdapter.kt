@@ -1,10 +1,7 @@
 package com.amnah.marvelapp.ui.home
 
 import com.amnah.marvelapp.R
-import com.amnah.marvelapp.data.local.entity.CharacterEntity
-import com.amnah.marvelapp.data.remote.response.character.CharacterResult
 import com.amnah.marvelapp.ui.base.BaseAdapter
-import com.amnah.marvelapp.data.remote.response.comics.ComicsResult
 import com.amnah.marvelapp.data.repository.domain.models.Characters
 
 class NestedCharactersAdapter(
@@ -12,6 +9,6 @@ class NestedCharactersAdapter(
     val listener: HomeInteractionListener
 ): BaseAdapter<Characters>(item, listener) {
     override val layoutId: Int
-        get() = R.layout.item_nested_characters
+        get() = R.layout.item_nested_raw
 
 }

@@ -17,5 +17,9 @@
         android:id="@+id/characterFragment"
         android:title=""
         android:icon="@drawable/ic_happy"/>
+    <item
+        android:id="@+id/comicsFragment"
+        android:title=""
+        android:icon="@drawable/ic_comics"/>
 
 </menu>

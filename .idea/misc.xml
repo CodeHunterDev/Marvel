@@ -8,16 +8,19 @@
         <entry key="..\:/Marvelapp/app/src/main/res/layout/character_item.xml" value="0.1" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/fragment_Events.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/fragment_character.xml" value="0.20416666666666666" />
+        <entry key="..\:/Marvelapp/app/src/main/res/layout/fragment_comics.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/fragment_creator.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/fragment_events.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/fragment_search.xml" value="0.1" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/fragment_stories.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_character.xml" value="0.20416666666666666" />
+        <entry key="..\:/Marvelapp/app/src/main/res/layout/item_comics.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_events.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_nested_characters.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_nested_comics.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_nested_events.xml" value="0.20416666666666666" />
+        <entry key="..\:/Marvelapp/app/src/main/res/layout/item_nested_raw.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_nested_recycler.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_nested_recycler_characters.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_nested_recycler_comics.xml" value="0.20416666666666666" />

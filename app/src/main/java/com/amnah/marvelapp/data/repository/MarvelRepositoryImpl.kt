@@ -37,7 +37,7 @@ class MarvelRepositoryImpl @Inject constructor(
             try {
                 val searchCharacters =
                     apiService.getSearchCharacter(name).body()?.data?.results?.map {
-                        characterMapper.map(it)
+                        characterMapper.characterMap(it)
                     }
                 emit(State.Success(searchCharacters))
             } catch (throwable: Throwable) {
