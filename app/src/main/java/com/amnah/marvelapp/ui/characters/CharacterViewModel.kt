@@ -2,7 +2,6 @@ package com.amnah.marvelapp.ui.characters
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.asLiveData
-import com.amnah.marvelapp.data.local.entity.CharacterEntity
 import com.amnah.marvelapp.data.repository.MarvelRepository
 import com.amnah.marvelapp.data.repository.domain.models.Characters
 import com.amnah.marvelapp.ui.base.BaseViewModel
@@ -16,7 +15,7 @@ class CharacterViewModel @Inject constructor(
     repository: MarvelRepository
 ) : BaseViewModel(), ICharacterInteraction {
 
-    val character: LiveData<State<List<CharacterEntity>?>> =
+    val character: LiveData<State<List<Characters>?>> =
         repository.getCharacters().asLiveData(Dispatchers.IO)
 
 }

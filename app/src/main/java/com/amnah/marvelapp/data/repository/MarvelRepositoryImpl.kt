@@ -2,7 +2,6 @@ package com.amnah.marvelapp.data.repository
 
 import android.util.Log
 import com.amnah.marvelapp.data.local.dao.MarvelCharacterDao
-import com.amnah.marvelapp.data.local.entity.CharacterEntity
 import com.amnah.marvelapp.data.remote.MarvelService
 import com.amnah.marvelapp.data.repository.domain.mapper.CharacterMapper
 import com.amnah.marvelapp.data.repository.domain.models.Characters
@@ -17,15 +16,14 @@ class MarvelRepositoryImpl @Inject constructor(
     private val characterDao: MarvelCharacterDao
 ) : MarvelRepository {
 
-    override fun getCharacters(): Flow<State<List<CharacterEntity>?>> {
+    override fun getCharacters(): Flow<State<List<Characters>?>> {
         return flow {
             emit(State.Loading)
             try {
                 val bodyCharacters =
                     apiService.getCharacters().body()?.data?.results?.map { characterEntity ->
-                        characterMapper.characterEntityMap(characterEntity)
+                        characterMapper.characterMap(characterEntity)
                     }
-                bodyCharacters?.let { characterDao.addCharacters(it) }
                 emit(State.Success(bodyCharacters))
             } catch (e: Exception) {
 
@@ -65,11 +63,26 @@ class MarvelRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun getCharacterRefresh(name: String?) {
-        val response = apiService.getSearchCharacter(name)
-        response.body()?.data?.results?.map {
-            characterMapper.characterEntityMap(it)
+    override fun getComics(): Flow<State<List<Characters>?>> {
+        return flow {
+            emit(State.Loading)
+            try {
+                val bodyComics = apiService.getComics().body()?.data?.results?.map { comics ->
+                    characterMapper.comicsMap(comics)
+                }
+                emit(State.Success(bodyComics))
+            } catch (throwable: Throwable) {
+                emit(State.Error(throwable))
+                Log.i("Amnah", throwable.message.toString())
+            }
         }
-//       characterDao.addCharacters(response)
     }
+
+//    override suspend fun getCharacterRefresh(name: String?) {
+//        val response = apiService.getSearchCharacter(name)
+//        response.body()?.data?.results?.map {
+//            characterMapper.characterEntityMap(it)
+//        }
+////       characterDao.addCharacters(response)
+//    }
 }

@@ -5,5 +5,4 @@ data class Characters(
     val name: String?,
     val imageUrl: String?,
     val description: String?,
-    val creatorsName: String?
 )

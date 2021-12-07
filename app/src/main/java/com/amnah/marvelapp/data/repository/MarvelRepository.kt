@@ -6,11 +6,13 @@ import com.amnah.marvelapp.utils.State
 import kotlinx.coroutines.flow.Flow
 
 interface MarvelRepository {
-    fun getCharacters(): Flow<State<List<CharacterEntity>?>>
+    fun getCharacters(): Flow<State<List<Characters>?>>
 
     fun getSearchCharacters(name: String?): Flow<State<List<Characters>?>>
 
     fun getEvents(): Flow<State<List<Characters>?>>
 
-    suspend fun getCharacterRefresh(name: String?)
+    fun getComics() : Flow<State<List<Characters>?>>
+
+//    suspend fun getCharacterRefresh(name: String?)
 }

@@ -10,7 +10,7 @@
         android:title=""
         android:icon="@drawable/ic_search"/>
     <item
-        android:id="@+id/storyFragment"
+        android:id="@+id/eventsFragment"
         android:title=""
         android:icon="@drawable/ic_creator"/>
     <item
