@@ -13,6 +13,6 @@ interface MarvelCharacterDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addCharacters(item: List<CharacterEntity>)
 
-    @Query("Select * from CharacterEntity")
-    fun getCharacter(): Flow<List<CharacterEntity>>
+    @Query("SELECT * FROM CharacterEntity WHERE name == :searchName")
+    fun getCharacter(searchName: String): Flow<List<CharacterEntity>>
 }
