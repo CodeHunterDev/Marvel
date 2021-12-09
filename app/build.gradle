@@ -90,4 +90,7 @@ dependencies {
     //hilt dependency injection
     implementation "com.google.dagger:hilt-android:2.40.3"
     kapt "com.google.dagger:hilt-compiler:2.40.3"
+
+    // lottie animation
+    implementation 'com.airbnb.android:lottie:4.2.0'
 }

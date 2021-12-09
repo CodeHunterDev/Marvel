@@ -15,18 +15,58 @@
         android:layout_height="match_parent"
         tools:context=".ui.home.HomeFragment">
 
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="monospace"
+            android:text="@string/marvel_app"
+            android:textSize="16sp"
+            android:textColor="@color/dark_color"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:orientation="vertical"
-            app:showOnSuccess="@{viewModel.character}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            app:showOnSuccess="@{viewModel.series}"
+            tools:listitem="@layout/item_nested_recycler_series" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_error"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:lottie_rawRes="@raw/error_animation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:showOnError="@{viewModel.series}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_loading"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:listitem="@layout/item_nested_recycler_characters"/>
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading_animation"
+            app:showOnLoading="@{viewModel.series}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

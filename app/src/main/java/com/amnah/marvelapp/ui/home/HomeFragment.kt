@@ -38,9 +38,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                     adapter.setItem(HomeItems.EventsType(it))
                 }
             }
-            viewModel.character.observe(viewLifecycleOwner) { character ->
+            viewModel.series.observe(viewLifecycleOwner) { character ->
                 character?.data?.let {
-                    adapter.setItem(HomeItems.CharactersType(it))
+                    adapter.setItem(HomeItems.SeriesType(it))
                 }
             }
 

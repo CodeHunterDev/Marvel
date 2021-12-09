@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/eventsFragment"
-        android:name="com.amnah.marvelapp.ui.story.EventsFragment"
+        android:name="com.amnah.marvelapp.ui.event.EventsFragment"
         android:label="fragment_events"
         tools:layout="@layout/fragment_events" />
     <fragment

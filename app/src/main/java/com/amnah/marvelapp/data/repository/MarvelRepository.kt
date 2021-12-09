@@ -7,11 +7,10 @@ import kotlinx.coroutines.flow.Flow
 
 interface MarvelRepository {
     fun getCharacters(): Flow<State<List<Characters>?>>
-
     suspend fun getSearchCharacters(name: String?): Flow<List<Characters>?>
     suspend fun getSearchResult(name: String?)
-
     fun getEvents(): Flow<State<List<Characters>?>>
-
     fun getComics() : Flow<State<List<Characters>?>>
+    fun getSeries(): Flow<State<List<Characters>?>>
+
 }

@@ -1,4 +1,4 @@
-package com.amnah.marvelapp.ui.story
+package com.amnah.marvelapp.ui.event
 
 import android.os.Bundle
 import android.view.LayoutInflater

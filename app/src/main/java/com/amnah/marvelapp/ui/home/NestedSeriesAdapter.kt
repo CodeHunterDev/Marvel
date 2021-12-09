@@ -4,7 +4,7 @@ import com.amnah.marvelapp.R
 import com.amnah.marvelapp.ui.base.BaseAdapter
 import com.amnah.marvelapp.data.repository.domain.models.Characters
 
-class NestedCharactersAdapter(
+class NestedSeriesAdapter(
     val item: List<Characters>,
     val listener: HomeInteractionListener
 ): BaseAdapter<Characters>(item, listener) {

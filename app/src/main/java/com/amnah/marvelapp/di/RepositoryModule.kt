@@ -5,6 +5,7 @@ import com.amnah.marvelapp.data.local.dao.MarvelCharacterDao
 import com.amnah.marvelapp.data.remote.MarvelService
 import com.amnah.marvelapp.data.repository.MarvelRepository
 import com.amnah.marvelapp.data.repository.MarvelRepositoryImpl
+import com.amnah.marvelapp.data.repository.domain.mapper.CharacterEntityMapper
 import com.amnah.marvelapp.data.repository.domain.mapper.CharacterMapper
 import dagger.Module
 import dagger.Provides
@@ -20,14 +21,20 @@ object RepositoryModule {
     fun providesMarvelRepository(
         apiService: MarvelService,
         characterMapper: CharacterMapper,
+        characterEntityMapper: CharacterEntityMapper,
         characterDao: MarvelCharacterDao
     ): MarvelRepository {
-        return MarvelRepositoryImpl(apiService, characterMapper,characterDao)
+        return MarvelRepositoryImpl(apiService, characterMapper,characterEntityMapper ,characterDao)
     }
 
     @Provides
     @Singleton
     fun providerCharacterMapper(): CharacterMapper = CharacterMapper()
+
+    @Provides
+    @Singleton
+    fun providerCharacterMapperEntity(): CharacterEntityMapper = CharacterEntityMapper()
+
 
     @Provides
     @Singleton

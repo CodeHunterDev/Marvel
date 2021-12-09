@@ -1,11 +1,9 @@
 package com.amnah.marvelapp.ui.home
 
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
 import com.amnah.marvelapp.BR
 import com.amnah.marvelapp.R
 import com.amnah.marvelapp.ui.base.BaseAdapter
-import com.amnah.marvelapp.ui.base.MarvelDiffUtils
 
 
 class NestedHomeAdapter(
@@ -36,7 +34,7 @@ class NestedHomeAdapter(
         when (viewType) {
             HomeItemsTypes.TYPE_COMICS.index -> R.layout.item_nested_recycler_comics
             HomeItemsTypes.TYPE_EVENTS.index -> R.layout.item_nested_recycler_events
-            else -> R.layout.item_nested_recycler_characters
+            else -> R.layout.item_nested_recycler_series
         }
 
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
@@ -57,10 +55,10 @@ class NestedHomeAdapter(
                     NestedEventsAdapter(currentItem.items, listener)
                 )
             }
-            is HomeItems.CharactersType -> {
+            is HomeItems.SeriesType -> {
                 itemViewHolder.binding.setVariable(
                     BR.adapter,
-                    NestedCharactersAdapter(currentItem.items, listener)
+                    NestedSeriesAdapter(currentItem.items, listener)
                 )
             }
         }

@@ -10,7 +10,7 @@ class CharacterAdapter(
     item: List<Characters>,
     listener: ICharacterInteraction
 ) : BaseAdapter<Characters>(item, listener) {
-    override val layoutId: Int = R.layout.item_character
+    override val layoutId: Int = R.layout.item_raw
 }
 
 interface ICharacterInteraction : BaseInteractionListener

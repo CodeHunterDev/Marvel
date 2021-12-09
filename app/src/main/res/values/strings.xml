@@ -2,8 +2,12 @@
     <string name="app_name">Marvel app</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="search_about_marvel">search about Marvel...</string>
-    <string name="characters">Characters</string>
+    <string name="search_about_marvel">search about Marvel…</string>
+    <string name="series">Series</string>
     <string name="comics">Comics</string>
     <string name="events">Events</string>
+    <string name="marvel_app">MARVEL APP</string>
+    <string name="characters_logo">CHARACTERS</string>
+    <string name="events_logo">EVENTS</string>
+    <string name="comics_logo">COMICS</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.amnah.marvelapp.ui.story
+package com.amnah.marvelapp.ui.event
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.asLiveData

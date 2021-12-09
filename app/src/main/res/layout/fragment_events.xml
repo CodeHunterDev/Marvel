@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.amnah.marvelapp.ui.story.EventsViewModel" />
+            type="com.amnah.marvelapp.ui.event.EventsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,10 +15,24 @@
         android:layout_height="match_parent"
         tools:context=".ui.characters.CharacterFragment">
 
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="monospace"
+            android:text="@string/events_logo"
+            android:textSize="16sp"
+            android:textColor="@color/dark_color"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_character"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:orientation="vertical"
             app:items="@{viewModel.events.data}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -26,32 +40,34 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
             app:showOnSuccess="@{viewModel.events}"
-            tools:listitem="@layout/item_character" />
+            tools:listitem="@layout/item_raw" />
 
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:indeterminateTint="@color/purple_500"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_error"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:lottie_rawRes="@raw/error_animation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:showOnError="@{viewModel.events}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/recycler_character"
-            app:layout_constraintVertical_bias="0.32"
-            app:showOnLoading="@{viewModel.events}" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:src="@drawable/ic_cancel"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_loading"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.32999998"
-            app:showOnError="@{viewModel.events}"
-            app:tint="@color/purple_500" />
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading_animation"
+            app:showOnLoading="@{viewModel.events}" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

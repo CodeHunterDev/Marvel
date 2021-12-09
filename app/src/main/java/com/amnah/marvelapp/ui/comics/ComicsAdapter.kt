@@ -11,5 +11,5 @@ class ComicsAdapter(
     item: List<Characters>,
     listener: ICharacterInteraction
 ) : BaseAdapter<Characters>(item, listener) {
-    override val layoutId: Int = R.layout.item_comics
+    override val layoutId: Int = R.layout.item_raw
 }

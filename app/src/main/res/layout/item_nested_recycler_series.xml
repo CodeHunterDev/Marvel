@@ -7,7 +7,7 @@
 
         <variable
             name="adapter"
-            type="com.amnah.marvelapp.ui.home.NestedCharactersAdapter" />
+            type="com.amnah.marvelapp.ui.home.NestedSeriesAdapter" />
 
     </data>
 
@@ -21,9 +21,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="@string/characters"
-            android:textColor="@color/black"
-            android:textSize="16sp"
+            android:text="@string/series"
+            android:textColor="@color/dark_color"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
