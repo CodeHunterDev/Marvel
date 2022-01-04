@@ -12,6 +12,28 @@
         android:layout_height="match_parent"
         tools:context=".ui.MarvelActivity">
 
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/layoutAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+<!--            <com.google.android.material.appbar.MaterialToolbar-->
+<!--                android:id="@+id/topAppBar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?attr/actionBarSize" />-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/img"
+                />
+        </com.google.android.material.appbar.AppBarLayout>
+
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragment_host"
             android:name="androidx.navigation.fragment.NavHostFragment"
@@ -21,22 +43,19 @@
             app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutAppBar"
             app:navGraph="@navigation/nav_controller" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:menu="@menu/menu"
-            android:background="@color/white"
-            android:elevation="16dp"
-            app:labelVisibilityMode="unlabeled"
-            app:itemBackground="@color/white"
-            app:itemIconTint="@color/dark_color"
+            app:backgroundTint="@color/white"
+            app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
+            app:itemRippleColor="@color/orangeLight"
+            app:labelVisibilityMode="labeled"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:menu="@menu/menu" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
