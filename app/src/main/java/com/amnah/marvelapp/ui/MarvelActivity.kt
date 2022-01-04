@@ -27,10 +27,10 @@ class MarvelActivity : AppCompatActivity() {
         _binding.bottomNavigationView.setupWithNavController(navController)
 
     }
-
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.fragment_host)
         navController.navigateUp()
         return true
     }
+
 }

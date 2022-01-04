@@ -8,13 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="app_color">#21242C</color>
-    <color name="dark_color">#09111B</color>
-    <color name="white_dark">#E5E5E5</color>
-    <color name="orange">#F13B03</color>
-    <color name="grayDark">#898787</color>
-    <color name="gray">#AA9F9F</color>
-    <color name="orangeLight">#60FF5723</color>
-    <color name="category_color">#373C43</color>
-    <color name="gray_6">#6C6F77</color>
+    <color name="app_color">#67787E</color>
+    <color name="dark_color">#424F56</color>
+    <color name="white_dark">#FDF7F0</color>
+    <color name="gray_light">#F2F2F2</color>
+    <color name="orangeLight">#61F58611</color>
 </resources>

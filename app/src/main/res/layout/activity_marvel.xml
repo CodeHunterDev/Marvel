@@ -15,6 +15,7 @@
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/layoutAppBar"
             android:layout_width="match_parent"
+            android:background="@color/white"
             android:layout_height="?attr/actionBarSize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -51,6 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:backgroundTint="@color/white"
+            app:itemIconTint="@color/dark_color"
             app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
             app:itemRippleColor="@color/orangeLight"
             app:labelVisibilityMode="labeled"
