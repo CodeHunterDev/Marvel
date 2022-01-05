@@ -26,7 +26,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:showOnSuccess="@{viewModel.series}"
+            app:showOnSuccess="@{viewModel.characters}"
             tools:listitem="@layout/item_nested_recycler_series" />
 
         <com.airbnb.lottie.LottieAnimationView
@@ -36,7 +36,7 @@
             app:lottie_rawRes="@raw/error_animation"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:showOnError="@{viewModel.series}"
+            app:showOnError="@{viewModel.characters}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +53,7 @@
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/loading_animation"
-            app:showOnLoading="@{viewModel.series}" />
+            app:showOnLoading="@{viewModel.characters}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

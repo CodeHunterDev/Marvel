@@ -33,17 +33,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                     adapter.setItem(HomeItems.ComicsType(it))
                 }
             }
-            viewModel.events.observe(viewLifecycleOwner) { events ->
+            viewModel.characters.observe(viewLifecycleOwner) { events ->
                 events?.data?.let {
-                    adapter.setItem(HomeItems.EventsType(it))
+                    adapter.setItem(HomeItems.CharactersType(it))
                 }
             }
-            viewModel.series.observe(viewLifecycleOwner) { character ->
-                character?.data?.let {
-                    adapter.setItem(HomeItems.SeriesType(it))
-                }
-            }
-
         }
     }
 

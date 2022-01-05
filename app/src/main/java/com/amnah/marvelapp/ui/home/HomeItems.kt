@@ -4,7 +4,5 @@ import com.amnah.marvelapp.data.repository.domain.models.Characters
 
 sealed class HomeItems(val type: HomeItemsTypes)  {
     class ComicsType(val items: List<Characters>): HomeItems(HomeItemsTypes.TYPE_COMICS)
-    class EventsType(val items: List<Characters>): HomeItems(HomeItemsTypes.TYPE_EVENTS)
-    class SeriesType(val items: List<Characters>): HomeItems(HomeItemsTypes.TYPE_SERIES)
-
+    class CharactersType(val items: List<Characters>): HomeItems(HomeItemsTypes.TYPE_CHARACTERS)
 }

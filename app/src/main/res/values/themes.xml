@@ -17,10 +17,14 @@
 
     <!-- Shareable image style -->
     <style name="ShapeAppearanceOverlay.App.CornerSize15Percent" parent="">
-        <item name="cornerSize">20%</item>
+        <item name="cornerSizeTopLeft">20%</item>
     </style>
 
     <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@color/orangeLight</item>
+    </style>
+    <!-- Shareable image style -->
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
     </style>
 </resources>

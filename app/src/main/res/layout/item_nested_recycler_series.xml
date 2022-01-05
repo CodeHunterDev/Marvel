@@ -5,9 +5,9 @@
 
     <data>
 
-        <variable
-            name="adapter"
-            type="com.amnah.marvelapp.ui.home.NestedSeriesAdapter" />
+<!--        <variable-->
+<!--            name="adapter"-->
+<!--            type="com.amnah.marvelapp.ui.home.NestedSeriesAdapter" />-->
 
     </data>
 
@@ -33,7 +33,6 @@
             android:id="@+id/nested_recycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:adapter="@{adapter}"
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -5,7 +5,6 @@ import com.amnah.marvelapp.BR
 import com.amnah.marvelapp.R
 import com.amnah.marvelapp.ui.base.BaseAdapter
 
-
 class NestedHomeAdapter(
     private var listItem: MutableList<HomeItems>,
     private val listener: HomeInteractionListener
@@ -33,7 +32,7 @@ class NestedHomeAdapter(
     private fun getLayoutId(viewType: Int): Int =
         when (viewType) {
             HomeItemsTypes.TYPE_COMICS.index -> R.layout.item_nested_recycler_comics
-            HomeItemsTypes.TYPE_EVENTS.index -> R.layout.item_nested_recycler_events
+            HomeItemsTypes.TYPE_CHARACTERS.index -> R.layout.item_nested_recycler_characters
             else -> R.layout.item_nested_recycler_series
         }
 
@@ -49,16 +48,10 @@ class NestedHomeAdapter(
                     NestedComicsAdapter(currentItem.items, listener)
                 )
             }
-            is HomeItems.EventsType -> {
+            is HomeItems.CharactersType -> {
                 itemViewHolder.binding.setVariable(
                     BR.adapter,
-                    NestedEventsAdapter(currentItem.items, listener)
-                )
-            }
-            is HomeItems.SeriesType -> {
-                itemViewHolder.binding.setVariable(
-                    BR.adapter,
-                    NestedSeriesAdapter(currentItem.items, listener)
+                    NestedCharactersAdapter(currentItem.items, listener)
                 )
             }
         }

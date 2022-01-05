@@ -3,12 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Marvelapp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.20092592592592592" />
+        <entry key="..\:/Marvelapp/app/src/main/res/drawable-v24/post_shape.xml" value="0.20092592592592592" />
         <entry key="..\:/Marvelapp/app/src/main/res/drawable/action_home.xml" value="0.2203125" />
         <entry key="..\:/Marvelapp/app/src/main/res/drawable/ic_cancel.xml" value="0.2203125" />
+        <entry key="..\:/Marvelapp/app/src/main/res/drawable/ic_comics.xml" value="0.20092592592592592" />
+        <entry key="..\:/Marvelapp/app/src/main/res/drawable/ic_creator.xml" value="0.20092592592592592" />
+        <entry key="..\:/Marvelapp/app/src/main/res/drawable/ic_favorite.xml" value="0.20092592592592592" />
+        <entry key="..\:/Marvelapp/app/src/main/res/drawable/ic_full_favorite.xml" value="0.20092592592592592" />
         <entry key="..\:/Marvelapp/app/src/main/res/drawable/ic_happy.xml" value="0.2203125" />
         <entry key="..\:/Marvelapp/app/src/main/res/drawable/ic_home.xml" value="0.2203125" />
+        <entry key="..\:/Marvelapp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.20092592592592592" />
+        <entry key="..\:/Marvelapp/app/src/main/res/drawable/ic_outline_home_24.xml" value="0.20092592592592592" />
         <entry key="..\:/Marvelapp/app/src/main/res/drawable/ic_search.xml" value="0.2203125" />
-        <entry key="..\:/Marvelapp/app/src/main/res/drawable/image_shadow.xml" value="0.2203125" />
         <entry key="..\:/Marvelapp/app/src/main/res/drawable/search_shape.xml" value="0.2203125" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/activity_marvel.xml" value="0.20416666666666666" />
@@ -18,11 +25,13 @@
         <entry key="..\:/Marvelapp/app/src/main/res/layout/fragment_comics.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/fragment_creator.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/fragment_events.xml" value="0.20416666666666666" />
-        <entry key="..\:/Marvelapp/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Marvelapp/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/fragment_search.xml" value="0.25" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/fragment_stories.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_character.xml" value="0.20416666666666666" />
+        <entry key="..\:/Marvelapp/app/src/main/res/layout/item_characters_raw.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_comics.xml" value="0.20416666666666666" />
+        <entry key="..\:/Marvelapp/app/src/main/res/layout/item_comics_row.xml" value="0.25" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_events.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_nested_characters.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_nested_comics.xml" value="0.20416666666666666" />
@@ -33,8 +42,9 @@
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_nested_recycler_comics.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_nested_recycler_events.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_nested_recycler_series.xml" value="0.20416666666666666" />
-        <entry key="..\:/Marvelapp/app/src/main/res/layout/item_raw.xml" value="0.20416666666666666" />
+        <entry key="..\:/Marvelapp/app/src/main/res/layout/item_raw.xml" value="0.25" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/item_search.xml" value="0.20416666666666666" />
+        <entry key="..\:/Marvelapp/app/src/main/res/layout/item_series_row.xml" value="0.20416666666666666" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/nested_recycler_character_item.xml" value="0.1" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/nested_recycler_comic_item.xml" value="0.1" />
         <entry key="..\:/Marvelapp/app/src/main/res/layout/nested_recycler_item.xml" value="0.20416666666666666" />

@@ -15,10 +15,8 @@ class HomeViewModel @Inject constructor(
     repository: MarvelRepository
 ) : BaseViewModel(), HomeInteractionListener {
 
-    val series: LiveData<State<List<Characters>?>> =
-        repository.getSeries().asLiveData(Dispatchers.IO)
-    val events: LiveData<State<List<Characters>?>> =
-        repository.getEvents().asLiveData(Dispatchers.IO)
+    val characters: LiveData<State<List<Characters>?>> =
+        repository.getCharacters().asLiveData(Dispatchers.IO)
     val comics: LiveData<State<List<Characters>?>> =
         repository.getComics().asLiveData(Dispatchers.IO)
 

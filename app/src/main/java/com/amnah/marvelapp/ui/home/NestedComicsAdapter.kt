@@ -10,6 +10,6 @@ class NestedComicsAdapter(
     val listener: HomeInteractionListener
 ): BaseAdapter<Characters>(item, listener) {
     override val layoutId: Int
-        get() = R.layout.item_nested_raw
+        get() = R.layout.item_raw
 
 }
