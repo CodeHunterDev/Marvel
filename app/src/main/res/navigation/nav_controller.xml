@@ -6,28 +6,19 @@
     app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/characterFragment"
-        android:name="com.amnah.marvelapp.ui.characters.CharacterFragment"
-        android:label="CharacterFragment"
-        tools:layout="@layout/fragment_character"/>
+        android:id="@+id/ProfileFragment"
+        android:name="com.amnah.marvelapp.ui.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.amnah.marvelapp.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/eventsFragment"
-        android:name="com.amnah.marvelapp.ui.event.EventsFragment"
-        android:label="fragment_events"
-        tools:layout="@layout/fragment_events" />
-    <fragment
         android:id="@+id/searchFragment"
         android:name="com.amnah.marvelapp.ui.search.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
-    <fragment
-        android:id="@+id/comicsFragment"
-        android:name="com.amnah.marvelapp.ui.comics.ComicsFragment"
-        android:label="ComicsFragment"
-        tools:layout="@layout/fragment_comics"/>
+
 </navigation>

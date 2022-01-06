@@ -32,8 +32,7 @@ class NestedHomeAdapter(
     private fun getLayoutId(viewType: Int): Int =
         when (viewType) {
             HomeItemsTypes.TYPE_COMICS.index -> R.layout.item_nested_recycler_comics
-            HomeItemsTypes.TYPE_CHARACTERS.index -> R.layout.item_nested_recycler_characters
-            else -> R.layout.item_nested_recycler_series
+            else -> R.layout.item_nested_recycler_characters
         }
 
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {

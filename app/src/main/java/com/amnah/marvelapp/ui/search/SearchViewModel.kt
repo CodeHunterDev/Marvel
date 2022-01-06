@@ -1,17 +1,14 @@
 package com.amnah.marvelapp.ui.search
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.amnah.marvelapp.data.repository.MarvelRepository
 import com.amnah.marvelapp.data.repository.domain.models.Characters
 import com.amnah.marvelapp.ui.base.BaseViewModel
-import com.amnah.marvelapp.ui.characters.ICharacterInteraction
-import com.amnah.marvelapp.utils.State
+import com.amnah.marvelapp.ui.profile.ICharacterInteraction
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
