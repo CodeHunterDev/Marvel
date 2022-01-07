@@ -10,4 +10,5 @@
     <string name="characters_logo">CHARACTERS</string>
     <string name="events_logo">EVENTS</string>
     <string name="comics_logo">COMICS</string>
+    <string name="search">search</string>
 </resources>

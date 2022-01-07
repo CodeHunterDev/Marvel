@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.amnah.marvelapp.ui.home.HomeViewModel" />
@@ -27,31 +28,29 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:showOnSuccess="@{viewModel.characters}"
-            tools:listitem="@layout/item_nested_recycler_series" />
+            tools:listitem="@layout/item_nested_recycler_comics" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/animation_error"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            app:lottie_rawRes="@raw/error_animation"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:showOnError="@{viewModel.characters}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/animation_loading"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/lottie_width"
+            android:layout_height="@dimen/lottie_height"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
+            style="@style/LottieStyle"
+            app:lottie_rawRes="@raw/error_animation"
+            app:showOnError="@{viewModel.characters}" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_loading"
+            android:layout_width="@dimen/lottie_width"
+            android:layout_height="@dimen/lottie_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/LottieStyle"
             app:lottie_rawRes="@raw/loading_animation"
             app:showOnLoading="@{viewModel.characters}" />
 

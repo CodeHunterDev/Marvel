@@ -14,22 +14,22 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white_dark"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@color/white_dark">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/nested_recycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
             android:adapter="@{adapter}"
-            android:layout_marginBottom="8dp"
             android:orientation="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            tools:listitem="@layout/item_nested_raw" />
+            tools:listitem="@layout/item_comics_raw" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
