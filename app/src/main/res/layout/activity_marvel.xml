@@ -16,7 +16,7 @@
             android:id="@+id/layoutAppBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/white"
+            android:background="?android:attr/colorBackground"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -46,10 +46,10 @@
             android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:backgroundTint="@color/white"
+            app:backgroundTint="?android:attr/colorBackground"
             app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
-            app:itemIconTint="@color/dark_color"
-            app:itemRippleColor="@color/orangeLight"
+            app:itemIconTint="@color/brand_gray_dark"
+            app:itemRippleColor="@color/orange_light"
             app:labelVisibilityMode="labeled"
             app:layout_constraintBottom_toBottomOf="parent"
             app:menu="@menu/menu" />

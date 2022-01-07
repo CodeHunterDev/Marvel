@@ -42,7 +42,7 @@
                 android:layout_marginTop="@dimen/margin_medium"
                 android:layout_marginBottom="@dimen/margin_medium"
                 android:text="@{item.name}"
-                android:textColor="@color/dark_color"
+                android:textColor="@color/brand_gray_dark"
                 android:textSize="@dimen/text_size_large"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -62,7 +62,7 @@
                 app:layout_constraintHorizontal_bias="0.97"
                 app:layout_constraintStart_toEndOf="@+id/title"
                 app:layout_constraintTop_toTopOf="@+id/title"
-                app:tint="@color/dark_color" />
+                app:tint="@color/brand_gray_dark" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

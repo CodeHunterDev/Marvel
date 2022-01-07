@@ -8,9 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="app_color">#67787E</color>
-    <color name="dark_color">#424F56</color>
+    <color name="brand_gray_medium">#67787E</color>
+    <color name="brand_gray_dark">#424F56</color>
     <color name="white_dark">#FDF7F0</color>
-    <color name="gray_light">#F2F2F2</color>
-    <color name="orangeLight">#61F58611</color>
+    <color name="brand_gray_light">#F2F2F2</color>
+    <color name="orange_light">#61F58611</color>
 </resources>
