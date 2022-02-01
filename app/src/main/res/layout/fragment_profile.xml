@@ -41,17 +41,18 @@
 <!--            app:lottie_rawRes="@raw/error_animation"-->
 <!--            />-->
 
-<!--        <com.airbnb.lottie.LottieAnimationView-->
-<!--            android:id="@+id/animation_loading"-->
-<!--            style="@style/LottieStyle"-->
-<!--            android:layout_width="@dimen/lottie_width"-->
-<!--            android:layout_height="@dimen/lottie_height"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.25"-->
-<!--            app:lottie_rawRes="@raw/loading_animation" />-->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_loading"
+            style="@style/LottieStyle"
+            android:visibility="visible"
+            android:layout_width="@dimen/lottie_width"
+            android:layout_height="@dimen/lottie_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25"
+            app:lottie_rawRes="@raw/loading_animation" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

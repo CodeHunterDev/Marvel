@@ -11,11 +11,10 @@ import androidx.paging.ExperimentalPagingApi
 import com.amnah.marvelapp.databinding.FragmentProfileBinding
 import com.amnah.marvelapp.ui.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
-import javax.inject.Inject
+
 @ExperimentalPagingApi
 @AndroidEntryPoint
 class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
@@ -30,14 +29,20 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
         super.onViewCreated(view, savedInstanceState)
 
         profileAdapter = ProfileAdapter()
+        loadMoreOfItemComics()
+        binding.nestedRecycler.adapter = profileAdapter.withLoadStateHeaderAndFooter(
+            header = LoaderAdapter { profileAdapter::retry },
+            footer = LoaderAdapter { profileAdapter::retry }
+        )
+    }
 
-        binding.nestedRecycler.adapter = profileAdapter
-
+    private fun loadMoreOfItemComics(){
         lifecycleScope.launch {
             viewModel.getComicsWithPaging().distinctUntilChanged().collectLatest {
+                binding.animationLoading.isVisible = false
                 profileAdapter.submitData(it)
             }
-        }
 
+        }
     }
 }
