@@ -14,5 +14,4 @@ interface MarvelRepository {
     fun getEvents(): Flow<State<List<Characters>?>>
     fun getSeries(): Flow<State<List<Characters>?>>
     fun getComicsWithPaging(pagingConfig: PagingConfig) : Flow<PagingData<ComicsResult>>
-
 }

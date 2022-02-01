@@ -110,5 +110,4 @@ class MarvelRepositoryImpl @Inject constructor(
             pagingSourceFactory = { MarvelPagingSource(apiService) }
         ).flow
     }
-
 }
