@@ -18,6 +18,6 @@ class HomeViewModel @Inject constructor(
     val characters: LiveData<State<List<Characters>?>> =
         repository.getCharacters().asLiveData(Dispatchers.IO)
     val comics: LiveData<State<List<Characters>?>> =
-        repository.getComics().asLiveData(Dispatchers.IO)
+        repository.getSeries().asLiveData(Dispatchers.IO)
 
 }

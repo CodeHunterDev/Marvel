@@ -1,6 +1,5 @@
 package com.amnah.marvelapp.data.remote
 
-import android.util.Log
 import com.amnah.marvelapp.BuildConfig
 import com.amnah.marvelapp.utils.md5
 import okhttp3.Interceptor
@@ -19,7 +18,6 @@ class AuthInterceptor : Interceptor {
                 addQueryParameter(HASH_PARAM, hash)
 
             }.build().also {
-
                 return chain.proceed(this.newBuilder().url(it).build())
             }
         }

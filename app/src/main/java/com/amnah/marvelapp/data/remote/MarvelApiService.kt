@@ -9,7 +9,7 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface MarvelService {
+interface MarvelApiService {
     @GET("characters")
     suspend fun getCharacters(): Response<BaseMarvelResponse<CharacterResult>>
 
@@ -22,7 +22,9 @@ interface MarvelService {
     suspend fun getEvents(): Response<BaseMarvelResponse<EventsResult>>
 
     @GET("comics")
-    suspend fun getComics(): Response<BaseMarvelResponse<ComicsResult>>
+    suspend fun getComicsWithPaging(
+        @Query("limit") limit: Int
+    ): Response<BaseMarvelResponse<ComicsResult>>
 
     @GET("series")
     suspend fun getSeries(): Response<BaseMarvelResponse<SeriesResult>>

@@ -2,7 +2,7 @@ package com.amnah.marvelapp.di
 
 import com.amnah.marvelapp.data.local.MarvelDatabase
 import com.amnah.marvelapp.data.local.dao.MarvelCharacterDao
-import com.amnah.marvelapp.data.remote.MarvelService
+import com.amnah.marvelapp.data.remote.MarvelApiService
 import com.amnah.marvelapp.data.repository.MarvelRepository
 import com.amnah.marvelapp.data.repository.MarvelRepositoryImpl
 import com.amnah.marvelapp.data.repository.domain.mapper.CharacterEntityMapper
@@ -19,7 +19,7 @@ object RepositoryModule {
     @Provides
     @Singleton
     fun providesMarvelRepository(
-        apiService: MarvelService,
+        apiService: MarvelApiService,
         characterMapper: CharacterMapper,
         characterEntityMapper: CharacterEntityMapper,
         characterDao: MarvelCharacterDao

@@ -1,8 +1,12 @@
 package com.amnah.marvelapp.data.repository
 
 import android.util.Log
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingData
 import com.amnah.marvelapp.data.local.dao.MarvelCharacterDao
-import com.amnah.marvelapp.data.remote.MarvelService
+import com.amnah.marvelapp.data.remote.MarvelApiService
+import com.amnah.marvelapp.data.remote.response.comics.ComicsResult
 import com.amnah.marvelapp.data.repository.domain.mapper.CharacterEntityMapper
 import com.amnah.marvelapp.data.repository.domain.mapper.CharacterMapper
 import com.amnah.marvelapp.data.repository.domain.models.Characters
@@ -13,7 +17,7 @@ import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class MarvelRepositoryImpl @Inject constructor(
-    private val apiService: MarvelService,
+    private val apiService: MarvelApiService,
     private val characterMapper: CharacterMapper,
     private val characterEntityMapper: CharacterEntityMapper,
     private val characterDao: MarvelCharacterDao
@@ -70,20 +74,20 @@ class MarvelRepositoryImpl @Inject constructor(
         }
     }
 
-    override fun getComics(): Flow<State<List<Characters>?>> {
-        return flow {
-            emit(State.Loading)
-            try {
-                val bodyComics = apiService.getComics().body()?.data?.results?.map { comics ->
-                    characterMapper.comicsMap(comics)
-                }
-                emit(State.Success(bodyComics))
-            } catch (throwable: Throwable) {
-                emit(State.Error(throwable))
-                Log.i("Amnah", throwable.message.toString())
-            }
-        }
-    }
+//    override fun getComics(): Flow<State<List<Characters>?>> {
+//        return flow {
+//            emit(State.Loading)
+//            try {
+//                val bodyComics = apiService.getComics().body()?.data?.results?.map { comics ->
+//                    characterMapper.comicsMap(comics)
+//                }
+//                emit(State.Success(bodyComics))
+//            } catch (throwable: Throwable) {
+//                emit(State.Error(throwable))
+//                Log.i("Amnah", throwable.message.toString())
+//            }
+//        }
+//    }
 
     override fun getSeries(): Flow<State<List<Characters>?>> {
         return flow {
@@ -98,6 +102,13 @@ class MarvelRepositoryImpl @Inject constructor(
                 Log.i("Amnah", throwable.message.toString())
             }
         }
+    }
+
+    override fun getComicsWithPaging(pagingConfig: PagingConfig): Flow<PagingData<ComicsResult>> {
+        return Pager(
+            config = pagingConfig,
+            pagingSourceFactory = { MarvelPagingSource(apiService) }
+        ).flow
     }
 
 }

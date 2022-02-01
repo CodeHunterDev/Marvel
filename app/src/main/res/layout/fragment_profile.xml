@@ -7,14 +7,51 @@
 
 <!--        <variable-->
 <!--            name="viewModel"-->
-<!--            type="com.amnah.marvelapp.ui.characters.ProfileViewModel" />-->
+<!--            type="com.amnah.marvelapp.ui.profile.ProfileViewModel" />-->
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white_dark"
-        tools:context=".ui.profile.ProfileFragment">
+        android:background="@color/white_dark">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/nested_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:listitem="@layout/item_comics_raw" />
+
+<!--        <com.airbnb.lottie.LottieAnimationView-->
+<!--            android:id="@+id/animation_error"-->
+<!--            android:layout_width="@dimen/lottie_width"-->
+<!--            android:layout_height="@dimen/lottie_height"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            style="@style/LottieStyle"-->
+<!--            app:lottie_rawRes="@raw/error_animation"-->
+<!--            />-->
+
+<!--        <com.airbnb.lottie.LottieAnimationView-->
+<!--            android:id="@+id/animation_loading"-->
+<!--            style="@style/LottieStyle"-->
+<!--            android:layout_width="@dimen/lottie_width"-->
+<!--            android:layout_height="@dimen/lottie_height"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.25"-->
+<!--            app:lottie_rawRes="@raw/loading_animation" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

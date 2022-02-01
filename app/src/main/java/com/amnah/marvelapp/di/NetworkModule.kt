@@ -2,7 +2,7 @@ package com.amnah.marvelapp.di
 
 import com.amnah.marvelapp.BuildConfig
 import com.amnah.marvelapp.data.remote.AuthInterceptor
-import com.amnah.marvelapp.data.remote.MarvelService
+import com.amnah.marvelapp.data.remote.MarvelApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -22,14 +22,14 @@ object NetworkModule {
     fun marvelService(
         okHttpClient: OkHttpClient,
         GsonConverterFactory: GsonConverterFactory
-    ): MarvelService {
+    ): MarvelApiService {
         val retrofit = Retrofit.Builder()
             .baseUrl(BuildConfig.BASE_API_URL)
             .addConverterFactory(GsonConverterFactory)
             .client(okHttpClient)
             .build()
 
-        return retrofit.create(MarvelService::class.java)
+        return retrofit.create(MarvelApiService::class.java)
     }
 
     @Singleton

@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.amnah.marvelapp.data.repository.MarvelRepository
 import com.amnah.marvelapp.data.repository.domain.models.Characters
 import com.amnah.marvelapp.ui.base.BaseViewModel
-import com.amnah.marvelapp.ui.profile.ICharacterInteraction
+import com.amnah.marvelapp.ui.home.HomeInteractionListener
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -15,7 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SearchViewModel @Inject constructor(
     private val repository: MarvelRepository
-) : BaseViewModel(), ICharacterInteraction {
+) : BaseViewModel(), HomeInteractionListener {
 
     private var _inputSearch = MutableLiveData<List<Characters>?>()
     val inputSearch: LiveData<List<Characters>?>

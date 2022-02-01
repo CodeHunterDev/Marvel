@@ -63,4 +63,6 @@ data class ComicsResult(
     val variantDescription: String?,
     @SerializedName("variants")
     val variants: List<Variant>?
-)
+){
+    fun getImage() = "${thumbnail?.path}.${thumbnail?.extension}"
+}
